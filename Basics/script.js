@@ -45,11 +45,11 @@ console.log("------loops-----");
 for(let i=0;i<3;i++){
     console.log("for loop\nexample for next line");  //next line
 }
-//for-of -> used for Arrays and Strings only
+//for-of -> used for Arrays and Strings only - we get obj itself
 for(let i of a1){  //iterate -> characters
 console.log("for-of i=", i);
 }
-//for-in -> used for Objects
+//for-in -> used for Objects - we get index
 for(let i in student){  //iterate -> key values
 console.log("key=", i, " val=", student[i]);
 }
@@ -101,8 +101,7 @@ let classes = document.getElementsByClassName("myClass");
 console.dir(classes);
 let tags = document.getElementsByTagName("p");  //gives all paragraphs
 console.dir(tags);
-
-let h = document.querySelector("p");  //returns only first element of type para(p)
+let h = document.querySelector("p");  //returns only first element of type para(p). querySelectorAll returns all elements i.e, NodeList
 h.innerText = h.innerText + " :)";  // concat innerText and given text
 console.dir(h.innerText);
 
